@@ -386,6 +386,39 @@ ul, ol { padding: 0; list-style: none; }
   padding: 10px;
 }
 .about-layout__figure img { width: 100%; }
+
+/* 海外講師写真の差し替え待ちプレースホルダー（後から実写真に置き換え可能） */
+.photo-placeholder {
+  aspect-ratio: 3 / 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+  border: 1px dashed rgba(212, 175, 55, 0.5);
+  background: rgba(212, 175, 55, 0.04);
+}
+.photo-placeholder svg {
+  width: 38px;
+  height: 38px;
+  color: var(--c-gold);
+  opacity: 0.85;
+}
+.photo-placeholder span {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--c-text-on-dark-sub);
+  max-width: 200px;
+}
+.section--white .photo-placeholder,
+.section--ivory .photo-placeholder {
+  border-color: rgba(200, 155, 60, 0.5);
+  background: rgba(200, 155, 60, 0.05);
+}
+.section--white .photo-placeholder span,
+.section--ivory .photo-placeholder span { color: var(--c-text-on-light-sub); }
+
 .about-keywords {
   display: flex;
   flex-wrap: wrap;
@@ -800,6 +833,23 @@ ul, ol { padding: 0; list-style: none; }
 @media (min-width: 760px) {
   .roadmap { grid-template-columns: repeat(4, 1fr); gap: 14px; }
   .roadmap--3 { grid-template-columns: repeat(3, 1fr); }
+  .roadmap--5 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1080px) {
+  .roadmap--5 { grid-template-columns: repeat(5, 1fr); }
+}
+/* 5段階フロー図解：スマホ幅では各カードの間を縦のゴールドラインでつなぐ */
+@media (max-width: 759px) {
+  .roadmap--flow { gap: 32px; }
+  .roadmap--flow .roadmap__step:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    top: -22px;
+    left: 34px;
+    width: 1px;
+    height: 18px;
+    background: linear-gradient(180deg, transparent, rgba(212, 175, 55, 0.7));
+  }
 }
 .roadmap__step {
   position: relative;
