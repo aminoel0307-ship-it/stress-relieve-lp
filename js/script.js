@@ -3,7 +3,6 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     var cfg = window.SITE_CONFIG || {};
-    var consultUrl = cfg.consultUrl || "#";
     var lineUrl = cfg.lineUrl || "#";
 
     function applyLinks(selector, url) {
@@ -15,8 +14,8 @@
         }
       });
     }
-    applyLinks(".js-cta-consult", consultUrl);
-    applyLinks(".js-cta-line", lineUrl);
+    // 相談・お問い合わせ系CTAはすべて公式LINEに統一
+    applyLinks(".js-cta-consult, .js-cta-line", lineUrl);
 
     // フッター年号
     var yearEl = document.getElementById("js-year");

@@ -29,12 +29,13 @@ GitHub Pagesのプロジェクトページ（`https://<アカウント名>.githu
 
 ### 1. CTAリンク先（最重要）
 
-`js/config.js` の2つの値を、実際のURLに書き換えてください。
+`js/config.js` の値を、実際の公式LINE URLに書き換えてください。
+「受講相談」「受講希望」「相談する」等の相談・お問い合わせ系CTAはすべて、
+この1本の公式LINE URLに統一されています（別途フォームは使用していません）。
 
 ```js
 window.SITE_CONFIG = {
-  consultUrl: "https://forms.gle/xxxxxxxxx", // 受講相談フォームのURL
-  lineUrl: "https://lin.ee/xxxxxxxxx"        // 公式LINEの友だち追加URL
+  lineUrl: "https://lin.ee/C0byPWO" // 公式LINEの友だち追加URL
 };
 ```
 
