@@ -611,8 +611,8 @@ ul, ol { padding: 0; list-style: none; }
   font-size: 14px;
 }
 .model-table__row:last-child { border-bottom: none; }
-.model-table__row dt { color: var(--c-text-on-light-sub); }
-.model-table__row dd { margin: 0; font-weight: 700; text-align: right; color: var(--c-text-on-light); }
+.model-table__row dt { color: var(--c-text-on-light-sub); min-width: 0; }
+.model-table__row dd { margin: 0; font-weight: 700; text-align: right; color: var(--c-text-on-light); white-space: nowrap; flex: none; }
 .model-table__row--total { background: var(--c-ivory); font-weight: 700; }
 
 .disclaimer-box {
