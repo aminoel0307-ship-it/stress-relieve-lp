@@ -10,5 +10,5 @@ window.SITE_CONFIG = {
   consultUrl: "https://forms.gle/xxxxxxxxx",
 
   // 公式LINEの友だち追加URL
-  lineUrl: "https://lin.ee/xxxxxxxxx"
+  lineUrl: "https://lin.ee/C0byPWO"
 };
