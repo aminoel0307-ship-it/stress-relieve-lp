@@ -479,16 +479,8 @@ ul, ol { padding: 0; list-style: none; }
   overflow: hidden;
   background: var(--c-white);
 }
-.course-card__media { aspect-ratio: 4 / 3; overflow: hidden; }
+.course-card__media { aspect-ratio: 2 / 3; overflow: hidden; }
 .course-card__media img { width: 100%; height: 100%; object-fit: cover; }
-
-/* メイン＋補助の2枚構成（縦長写真をそのまま活かす） */
-.course-card__media-cluster { display: flex; gap: 3px; }
-.course-card__media-cluster .course-card__media {
-  aspect-ratio: 2 / 3;
-  flex: 2 1 0;
-}
-.course-card__media-cluster .course-card__media--sub { flex: 1 1 0; }
 .course-card__body { padding: 24px 22px 26px; }
 .course-card__eyebrow {
   font-size: 11.5px;
@@ -530,11 +522,9 @@ ul, ol { padding: 0; list-style: none; }
 }
 @media (min-width: 860px) {
   .course-card { display: grid; grid-template-columns: 1fr 1.2fr; }
-  .course-card__media { aspect-ratio: 3 / 4; }
-  .course-card__media-cluster .course-card__media { aspect-ratio: 2 / 3; }
+  .course-card__media { aspect-ratio: 2 / 3; }
   .course-card__body { display: flex; flex-direction: column; justify-content: center; }
-  .course-card:nth-child(even) .course-card__media,
-  .course-card:nth-child(even) .course-card__media-cluster { order: 2; }
+  .course-card:nth-child(even) .course-card__media { order: 2; }
 }
 
 /* ---------- チェックリスト（毎月サポート／サポート一覧） ---------- */
