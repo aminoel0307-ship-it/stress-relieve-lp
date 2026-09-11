@@ -665,19 +665,21 @@ ul, ol { padding: 0; list-style: none; }
 }
 
 /* ---------- 海外展開 ---------- */
-.overseas-gallery {
-  margin-top: 34px;
+.overseas-gallery { margin-top: 34px; }
+.overseas-gallery figure { overflow: hidden; border: 1px solid rgba(212,175,55,0.25); }
+.overseas-gallery .is-wide { aspect-ratio: 3/4; max-width: 460px; margin: 0 auto; }
+.overseas-gallery .is-wide img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 3/4; }
+
+.beautyworld-subs {
+  margin-top: 14px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 10px;
 }
-.overseas-gallery figure { overflow: hidden; border: 1px solid rgba(212,175,55,0.25); }
-.overseas-gallery img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/5; }
-.overseas-gallery .is-wide { grid-column: 1 / -1; aspect-ratio: 3/4; max-width: 460px; margin: 0 auto; }
-.overseas-gallery .is-wide img { aspect-ratio: 3/4; }
+.beautyworld-subs figure { overflow: hidden; border: 1px solid rgba(212,175,55,0.25); }
+.beautyworld-subs img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 3/2; }
 @media (min-width: 700px) {
-  .overseas-gallery { grid-template-columns: repeat(3, 1fr); }
-  .overseas-gallery .is-wide { grid-column: span 1; max-width: none; }
+  .beautyworld-subs { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ---------- ストーリー写真（Australia/Mexico等・実績写真） ---------- */
