@@ -749,6 +749,41 @@ ul, ol { padding: 0; list-style: none; }
   margin-bottom: 20px;
 }
 
+/* ---------- Founder's Story（Amyの想い） ---------- */
+.i-gold { color: var(--c-gold-deep); }
+.founder-letter { margin-top: 8px; }
+.founder-letter p {
+  font-size: 15px;
+  line-height: 2.05;
+  color: var(--c-text-on-light-sub);
+}
+.founder-letter p + p { margin-top: 1.3em; }
+.founder-letter__quote {
+  margin: 34px 0;
+  padding: 22px 24px;
+  border-left: 2px solid var(--c-gold);
+  background: rgba(212, 175, 55, 0.06);
+}
+.founder-letter__quote p {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  line-height: 1.75;
+  color: var(--c-text-on-light);
+}
+.founder-letter__quote p + p {
+  margin-top: 0.7em;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--c-text-on-light-sub);
+}
+.founder-letter p.founder-letter__signature {
+  margin-top: 30px;
+  font-family: var(--font-serif);
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--c-text-on-light);
+}
+
 /* ---------- メッセージ ---------- */
 .message-layout {
   display: grid;
