@@ -318,6 +318,13 @@ ul, ol { padding: 0; list-style: none; }
   letter-spacing: 0.02em;
   color: var(--c-text-on-dark-sub);
 }
+.hero__supporting {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--c-text-on-dark-sub);
+  max-width: 380px;
+  margin: -8px 0 20px;
+}
 @media (min-width: 620px) {
   .hero .cta-stack, .hero__line-link { margin-left: 0; margin-right: auto; }
 }
@@ -653,6 +660,37 @@ ul, ol { padding: 0; list-style: none; }
   color: var(--c-text-on-light-sub);
 }
 .condition-list li::before { content: "―"; color: var(--c-gold-deep); flex: none; }
+.section--black .condition-list li,
+.section--charcoal .condition-list li { color: var(--c-text-on-dark-sub); }
+
+/* ---------- こんな方におすすめです ---------- */
+.audience-intro { margin-bottom: 4px; }
+.audience-intro__title {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--c-gold);
+  margin-bottom: 14px;
+}
+
+/* ---------- 3講習の比較 ---------- */
+.course-compare { display: grid; gap: 12px; margin: 28px 0 6px; }
+.course-compare__item {
+  padding: 14px 18px;
+  border-left: 2px solid var(--c-gold-deep);
+  background: rgba(200, 155, 60, 0.06);
+}
+.course-compare__item strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 15px;
+  color: var(--c-text-on-light);
+  margin-bottom: 4px;
+}
+.course-compare__item span {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--c-text-on-light-sub);
+}
 .note-tag {
   display: inline-block;
   margin-top: 16px;
