@@ -1162,6 +1162,43 @@ ul, ol { padding: 0; list-style: none; }
   letter-spacing: 0.02em;
 }
 
+/* ---------- STUDENT VOICE ---------- */
+.voice-grid {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+@media (min-width: 760px) {
+  .voice-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.voice-card {
+  padding: 26px 22px;
+  border: 1px solid rgba(200, 155, 60, 0.3);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.5);
+}
+.voice-card__label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--c-gold-deep);
+  margin-bottom: 12px;
+}
+.voice-card__quote {
+  font-family: var(--font-serif);
+  font-size: 16.5px;
+  line-height: 1.7;
+  color: var(--c-text-on-light);
+  margin-bottom: 14px;
+}
+.voice-card__text {
+  font-size: 13px;
+  line-height: 1.85;
+  color: var(--c-text-on-light-sub);
+}
+.voice-card__text + .voice-card__text { margin-top: 0.9em; }
+
 /* ---------- 資格取得後サポート：リキャップグリッド ---------- */
 .support-recap {
   margin-top: 30px;
