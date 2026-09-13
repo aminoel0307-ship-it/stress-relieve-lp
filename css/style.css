@@ -42,7 +42,7 @@ body {
   font-size: 16px;
   line-height: 1.9;
   -webkit-font-smoothing: antialiased;
-  padding-bottom: var(--sticky-cta-h);
+  padding-bottom: calc(var(--sticky-cta-h) + env(safe-area-inset-bottom));
 }
 @media (min-width: 769px) {
   body { padding-bottom: 0; }
@@ -518,6 +518,15 @@ ul, ol { padding: 0; list-style: none; }
   letter-spacing: 0.05em;
   padding-top: 2px;
 }
+.course-card__tagline { font-size: 13px; color: var(--c-gold-deep); margin-bottom: 14px; }
+.course-card__next {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(200,155,60,0.3);
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--c-text-on-light-sub);
+}
 .course-card__tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .course-card__tag {
   font-size: 11.5px;
@@ -663,15 +672,6 @@ ul, ol { padding: 0; list-style: none; }
 .section--black .condition-list li,
 .section--charcoal .condition-list li { color: var(--c-text-on-dark-sub); }
 
-/* ---------- こんな方におすすめです ---------- */
-.audience-intro { margin-bottom: 4px; }
-.audience-intro__title {
-  font-family: var(--font-serif);
-  font-size: 18px;
-  color: var(--c-gold);
-  margin-bottom: 14px;
-}
-
 /* ---------- 3講習の比較 ---------- */
 .course-compare { display: grid; gap: 12px; margin: 28px 0 6px; }
 .course-compare__item {
@@ -716,8 +716,10 @@ ul, ol { padding: 0; list-style: none; }
 }
 .beautyworld-subs figure { overflow: hidden; border: 1px solid rgba(212,175,55,0.25); }
 .beautyworld-subs img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 3/2; }
+.beautyworld-subs__extra { display: none; }
 @media (min-width: 700px) {
   .beautyworld-subs { grid-template-columns: repeat(3, 1fr); }
+  .beautyworld-subs__extra { display: block; }
 }
 
 /* ---------- ストーリー写真（Australia/Mexico等・実績写真） ---------- */
@@ -820,6 +822,22 @@ ul, ol { padding: 0; list-style: none; }
   font-size: 15px;
   line-height: 1.8;
   color: var(--c-text-on-light);
+}
+.founder-letter p.founder-letter__note {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--c-text-on-light-sub);
+}
+.founder-letter p.founder-letter__flow {
+  margin-top: 30px;
+  padding: 16px 14px;
+  border: 1px dashed rgba(200,155,60,0.4);
+  font-size: 12.5px;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  color: var(--c-gold-deep);
+  text-align: center;
 }
 
 /* ---------- メッセージ ---------- */
