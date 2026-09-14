@@ -12,12 +12,7 @@
 (function () {
   "use strict";
 
-  var LINE_MESSAGE =
-    "【ストレスリリーブ®︎講習について相談希望です】\n" +
-    "① お名前\n" +
-    "② 現在のお仕事\n" +
-    "③ サロンの有無\n" +
-    "④ 受講希望地域";
+  var LINE_MESSAGE = "ストレスリリーブ";
 
   function copyText(text) {
     if (navigator.clipboard && navigator.clipboard.writeText) {
