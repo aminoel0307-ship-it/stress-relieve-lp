@@ -478,6 +478,68 @@ ul, ol { padding: 0; list-style: none; }
 }
 .reason-card__text { font-size: 14px; line-height: 1.85; color: var(--c-text-on-dark-sub); }
 
+/* ---------- 比較表（一般的なリンパ施術との違い） ---------- */
+.compare-table {
+  margin-top: 30px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.compare-table__head {
+  margin: 0;
+  padding: 14px 16px;
+  background: rgba(212, 175, 55, 0.1);
+  font-family: var(--font-serif);
+  font-size: 12.5px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--c-text-on-dark-sub);
+}
+.compare-table__head .is-gold { color: var(--c-gold); font-weight: 700; }
+.compare-table__row {
+  padding: 18px 16px;
+  border-top: 1px solid rgba(212, 175, 55, 0.18);
+  display: grid;
+  gap: 6px;
+}
+.compare-table__before {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--c-text-on-dark-sub);
+}
+.compare-table__after {
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 700;
+  color: var(--c-text-on-dark);
+}
+.compare-table__after::before { content: "→ "; color: var(--c-gold); font-weight: 700; }
+.compare-table__arrow { display: none; }
+@media (min-width: 600px) {
+  .compare-table__row {
+    grid-template-columns: 1fr auto 1.15fr;
+    align-items: center;
+    gap: 14px;
+  }
+  .compare-table__before { text-align: right; }
+  .compare-table__after { text-align: left; }
+  .compare-table__after::before { content: ""; }
+  .compare-table__arrow {
+    display: block;
+    text-align: center;
+    color: var(--c-gold);
+    font-size: 15px;
+  }
+}
+.compare-statement {
+  margin: 30px 0 0;
+  text-align: center;
+  font-family: var(--font-serif);
+  font-size: clamp(19px, 5vw, 24px);
+  line-height: 1.6;
+  color: var(--c-gold);
+}
+
 /* ---------- 3つの講習 ---------- */
 .course-list { margin-top: 40px; display: grid; gap: 28px; }
 .course-card {
@@ -1198,6 +1260,25 @@ ul, ol { padding: 0; list-style: none; }
   color: var(--c-text-on-light-sub);
 }
 .voice-card__text + .voice-card__text { margin-top: 0.9em; }
+.voice-card__flow {
+  margin: 16px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(200, 155, 60, 0.25);
+  display: grid;
+  gap: 10px;
+}
+.voice-card__flow > div { display: grid; gap: 2px; }
+.voice-card__flow dt {
+  font-size: 10.5px;
+  letter-spacing: 0.07em;
+  color: var(--c-gold-deep);
+}
+.voice-card__flow dd {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: var(--c-text-on-light-sub);
+}
 
 /* ---------- 資格取得後サポート：リキャップグリッド ---------- */
 .support-recap {
