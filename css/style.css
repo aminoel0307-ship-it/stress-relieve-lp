@@ -285,12 +285,14 @@ ul, ol { padding: 0; list-style: none; }
 .hero__title {
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: clamp(28px, 8.6vw, 52px);
+  font-size: clamp(26px, 7.8vw, 52px);
   line-height: 1.38;
   color: var(--c-white);
   margin-bottom: 12px;
   text-shadow: 0 2px 18px rgba(0,0,0,0.4);
 }
+/* 文節の途中で改行させない（狭い画面では文節単位で折り返す） */
+.nb { display: inline-block; }
 .hero__catch {
   font-family: var(--font-serif);
   font-size: clamp(15px, 4.2vw, 20px);
