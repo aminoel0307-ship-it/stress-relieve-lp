@@ -23,7 +23,7 @@
   --gap-inner: clamp(20px, 6vw, 32px);
   --radius: 4px;
   --shadow-gold: 0 8px 28px rgba(212, 175, 55, 0.18);
-  --sticky-cta-h: 68px;
+  --sticky-cta-h: 57px;
 }
 
 /* ---------- リセット / ベース ---------- */
@@ -966,16 +966,13 @@ ul, ol { padding: 0; list-style: none; }
   bottom: 0;
   z-index: 50;
   display: flex;
-  gap: 8px;
-  padding: 8px 10px;
-  padding-bottom: calc(8px + env(safe-area-inset-bottom));
+  padding: 6px 12px;
+  padding-bottom: calc(6px + env(safe-area-inset-bottom));
   background: rgba(10, 10, 10, 0.96);
   border-top: 1px solid rgba(212, 175, 55, 0.35);
   backdrop-filter: blur(6px);
 }
-.sticky-cta .btn { padding: 13px 10px; font-size: 13px; max-width: none; }
-.sticky-cta .btn-line { flex: 0 0 34%; }
-.sticky-cta .btn-gold { flex: 1 1 auto; }
+.sticky-cta .btn { width: 100%; max-width: none; padding: 12px 14px; font-size: 14px; line-height: 1.3; }
 @media (min-width: 769px) {
   .sticky-cta { display: none; }
 }
