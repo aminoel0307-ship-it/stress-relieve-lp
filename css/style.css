@@ -43,6 +43,16 @@ body {
   line-height: 1.9;
   -webkit-font-smoothing: antialiased;
   padding-bottom: calc(var(--sticky-cta-h) + env(safe-area-inset-bottom));
+  /* 小さい「ュ」「ッ」や長音「ー」が行頭に来ないようにする */
+  line-break: strict;
+}
+/* 本文の最終行が1〜2文字だけ残るのを抑える（対応ブラウザのみ） */
+p, dd, li, small { text-wrap: pretty; }
+/* 1〜3行程度の短い文は、行の長さをそろえて「ます」等だけが次の行に残るのを防ぐ */
+.worry-item p, .voice-card__flow dd, .compare-table__after, .icon-card__text,
+.roadmap__text, .course-card__next, .note-tag, .condition-list li, .cta-note {
+  text-wrap: balance;
+  word-break: auto-phrase;
 }
 @media (min-width: 769px) {
   body { padding-bottom: 0; }
@@ -185,6 +195,10 @@ ul, ol { padding: 0; list-style: none; }
 .btn-line:hover { background: rgba(212, 175, 55, 0.08); }
 
 .btn-small { padding: 13px 20px; font-size: 13px; max-width: 320px; }
+@media (max-width: 359px) {
+  /* 小さい画面でもボタンの文言を1行に収める */
+  .btn-small { padding-left: 14px; padding-right: 14px; letter-spacing: 0.02em; }
+}
 
 .cta-stack {
   display: flex;
@@ -220,6 +234,7 @@ ul, ol { padding: 0; list-style: none; }
   justify-content: space-between;
 }
 .site-header__logo {
+  white-space: nowrap;
   font-family: var(--font-serif);
   font-size: 15px;
   letter-spacing: 0.14em;
@@ -231,10 +246,17 @@ ul, ol { padding: 0; list-style: none; }
   color: var(--c-gold);
 }
 .site-header__cta {
+  white-space: nowrap;
   padding: 10px 16px;
   font-size: 12px;
   max-width: none;
   width: auto;
+}
+@media (max-width: 359px) {
+  /* 小さい画面でもロゴ・ボタンの文言を1行に収める */
+  .site-header__inner { padding-left: 16px; padding-right: 16px; }
+  .site-header__logo { font-size: 13px; letter-spacing: 0.06em; }
+  .site-header__cta { padding: 9px 12px; }
 }
 
 /* ---------- ファーストビュー ----------
@@ -292,7 +314,7 @@ ul, ol { padding: 0; list-style: none; }
   text-shadow: 0 2px 18px rgba(0,0,0,0.4);
 }
 /* 文節の途中で改行させない（狭い画面では文節単位で折り返す） */
-.nb { display: inline-block; }
+.nb { display: inline-block; max-width: 100%; }
 .hero__catch {
   font-family: var(--font-serif);
   font-size: clamp(15px, 4.2vw, 20px);
@@ -1210,6 +1232,7 @@ ul, ol { padding: 0; list-style: none; }
 }
 .stat-grid__num {
   display: block;
+  white-space: nowrap;
   font-family: var(--font-serif);
   font-size: clamp(24px, 6.6vw, 30px);
   line-height: 1;
@@ -1234,6 +1257,7 @@ ul, ol { padding: 0; list-style: none; }
   .voice-grid { grid-template-columns: repeat(3, 1fr); }
 }
 .voice-card {
+  min-width: 0;
   padding: 26px 22px;
   border: 1px solid rgba(200, 155, 60, 0.3);
   border-radius: var(--radius);
