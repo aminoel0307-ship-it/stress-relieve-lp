@@ -1,14 +1,15 @@
 /**
  * LINE message copy helper (English version)
  *
- * Copies a fixed message so the team can tell the inquiry came from the
- * English landing page. The LINE URL itself comes from ../js/config.js
- * (shared with the Japanese page) and is not changed here.
+ * Copies the same keyword as the Japanese page (ストレスリリーブ) so the
+ * official LINE account's keyword reply works for English visitors too.
+ * The LINE URL itself comes from ../js/config.js (shared with the Japanese
+ * page) and is not changed here.
  */
 (function () {
   "use strict";
 
-  var LINE_MESSAGE = "Stress Relieve International";
+  var LINE_MESSAGE = "ストレスリリーブ";
 
   function copyText(text) {
     if (navigator.clipboard && navigator.clipboard.writeText) {
